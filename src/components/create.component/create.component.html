@@ -1,0 +1,18 @@
+<div>
+    <h1>CREATE</h1>
+    <form #createform="ngForm">
+        <label>Numero</label>
+        <br/>
+        <input type="number" name="numero" #numero/>
+        <br/>
+        <label>Nombre</label>
+        <br/>
+        <input type="text" name="nombre" #nombre/>
+        <br/>
+        <label>Localidad</label>
+        <br/>
+        <input type="text" name="localidad" #localidad/>
+        <br/>
+        <button (click)="createDept()">Create</button>
+    </form>
+</div>

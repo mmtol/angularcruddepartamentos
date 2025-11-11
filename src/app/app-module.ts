@@ -9,13 +9,15 @@ import { appRoutingProvider, routing } from '../app.routing';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { ServiceDepts } from '../services/service.depts';
+import { CreateComponent } from '../components/create.component/create.component';
 
 @NgModule({
   declarations: 
   [
     App,
     MenuComponent,
-    DeptsComponent
+    DeptsComponent,
+    CreateComponent
   ],
   imports: 
   [
