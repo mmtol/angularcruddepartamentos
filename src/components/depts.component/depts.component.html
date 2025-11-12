@@ -18,9 +18,9 @@
                     <td>{{dept.numero}}</td>
                     <td>{{dept.nombre}}</td>
                     <td>{{dept.localidad}}</td>
-                    <td><button><a class="nav-link active" [routerLink]="['/details/'+dept.numero+'/'+dept.nombre+'/'+dept.localidad]">Details</a></button></td>
-                    <td><button><a class="nav-link active" [routerLink]="['/edit/'+dept.numero]">Edit</a></button></td>
-                    <td><button (click)="deleteDept(dept.numero)">Delete</button></td>
+                    <td><button class="btn btn-info"><a class="nav-link active" [routerLink]="['/details/'+dept.numero+'/'+dept.nombre+'/'+dept.localidad]">Details</a></button></td>
+                    <td><button class="btn btn-warning"><a class="nav-link active" [routerLink]="['/edit/'+dept.numero]">Edit</a></button></td>
+                    <td><button class="btn btn-danger" (click)="deleteDept(dept.numero)">Delete</button></td>
                 </tr>
             }
         </tbody>
