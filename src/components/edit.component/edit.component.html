@@ -1,0 +1,19 @@
+<div>
+    <h1>Edit departamento {{dept.numero}}</h1>
+    <!-- <button><a [routerLink]="['/depts']">Volver</a></button> -->
+    <form #editForm="ngForm">
+        <label>Numero</label>
+        <br/>
+        <input type="number" name="cajaNumero" #cajaNumero/>
+        <br/>
+        <label>Nombre</label>
+        <br/>
+        <input type="text" name="cajaNombre" #cajaNombre/>
+        <br/>
+        <label>Localidad</label>
+        <br/>
+        <input type="text" name="cajaLocalidad" #cajaLocalidad/>
+        <br/>
+        <button class="btn btn-info" (click)="editDept()">Edit</button>
+    </form>
+</div>

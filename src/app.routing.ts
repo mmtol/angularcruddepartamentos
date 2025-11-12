@@ -4,6 +4,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { ModuleWithProviders } from "@angular/core";
 import { CreateComponent } from "./components/create.component/create.component";
 import { DetailsComponent } from "./components/details.component/details.component";
+import { EditComponent } from "./components/edit.component/edit.component";
 
 const appRoutes:Routes=
 [
@@ -18,6 +19,10 @@ const appRoutes:Routes=
     {
         path:"details/:numero/:nombre/:localidad",
         component:DetailsComponent
+    },
+    {
+        path:"edit/:numero",
+        component:EditComponent
     }
 ]
 

@@ -43,4 +43,39 @@ export class ServiceDepts
 
         return promise;
     }
+
+    findDept(numero:number):Promise<any>
+    {
+        let url = environment.depts;
+        let endPoint = "api/departamentos/"+numero;
+        let promise = new Promise((resolve) =>
+        {
+            this._http.get(url+endPoint).subscribe(response=>
+            {
+                resolve(response);
+            })
+        })
+
+        return promise;
+    }
+
+    editDept(dept:Dept):Promise<any>
+    {
+        let url = environment.depts;
+        let endPoint = "api/departamentos";
+
+        let data = JSON.stringify(dept);
+        let header = new HttpHeaders();
+        header = header.set("Content-type", "application/json");
+
+        let promise = new Promise((resolve) =>
+        {
+            this._http.put(url+endPoint, data, {headers: header}).subscribe(response =>
+            {
+                resolve(response);
+            })
+        })
+
+        return promise;
+    }
 }

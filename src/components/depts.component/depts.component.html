@@ -7,6 +7,7 @@
                 <th>Nombre</th>
                 <th>Localidad</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,7 @@
                     <td>{{dept.nombre}}</td>
                     <td>{{dept.localidad}}</td>
                     <td><button><a class="nav-link active" [routerLink]="['/details/'+dept.numero+'/'+dept.nombre+'/'+dept.localidad]">Details</a></button></td>
+                    <td><button><a class="nav-link active" [routerLink]="['/edit/'+dept.numero]">Edit</a></button></td>
                 </tr>
             }
         </tbody>

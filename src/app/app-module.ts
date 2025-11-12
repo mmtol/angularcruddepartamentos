@@ -1,6 +1,6 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { MenuComponent } from '../components/menu.component/menu.component';
@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { ServiceDepts } from '../services/service.depts';
 import { CreateComponent } from '../components/create.component/create.component';
+import { DetailsComponent } from '../components/details.component/details.component';
+import { EditComponent } from '../components/edit.component/edit.component';
 
 @NgModule({
   declarations: 
@@ -17,14 +19,17 @@ import { CreateComponent } from '../components/create.component/create.component
     App,
     MenuComponent,
     DeptsComponent,
-    CreateComponent
+    CreateComponent,
+    DetailsComponent,
+    EditComponent
   ],
   imports: 
   [
     BrowserModule,
     AppRoutingModule,
     routing,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: 
   [
