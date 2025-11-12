@@ -78,4 +78,19 @@ export class ServiceDepts
 
         return promise;
     }
+
+    deleteDept(numero:number):Promise<any>
+    {
+        let url = environment.depts;
+        let endPoint = "api/departamentos/"+numero;
+        let promise = new Promise((resolve) =>
+        {
+            this._http.delete(url+endPoint).subscribe(response =>
+            {
+                resolve(response);
+            })
+        })
+
+        return promise;
+    }
 }

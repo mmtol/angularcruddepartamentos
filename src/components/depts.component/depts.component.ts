@@ -17,9 +17,23 @@ export class DeptsComponent implements OnInit
 
   ngOnInit(): void 
   {
+      this.loadDepts();
+  }
+
+  loadDepts(): void
+  {
     this._service.getDepts().then(response =>
     {
       this.depts = response;
-    })  
+    })
+  }
+
+  deleteDept(numero:number):void
+  {
+    this._service.deleteDept(numero).then(response =>
+    {
+      console.log(response);
+      this.loadDepts();
+    })
   }
 }
